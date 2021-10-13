@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ethan's Site</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/grid.css') }}"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="https://ethanpisani.com/static/img/favicon.ico" />
+    <meta name="robots" content="index,follow" />
+  </head>
+
+  <script>
+        var counts = {{ test|tojson }};
+
+
+        document.addEventListener(
+          "DOMContentLoaded",
+          function runFunction() {
+            for (i = 0; i < 150; i++) {
+                
+              (function (i) {
+                  
+                setTimeout(function () {
+                    var randomItem = counts[Math.floor(Math.random()*counts.length)];
+                  $(
+
+                    '<img class="sq" src="'+randomItem +'" loading="lazy">'
+                  ).appendTo("body");
+                }, i * 10);
+              })(i);
+            }
+            $(window).scroll(function() {
+if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+runFunction();
+}
+});
+          },
+
+          false
+        );
+  </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ethan's Site</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/app.css') }}"
+    />
+
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="https://ethanpisani.com/static/img/favicon.ico" />
+    <meta name="robots" content="index,follow" />
+  </head>
+  <script></script>
+  <body>
+
+    <div class="content">
+      <h1>Galaxy Generator</h1>
+      <img class="img"src="{{ name }}" height="384px"width="384px" loading="lazy">
+      <br>
+      <div class="con">
+      <button onClick="window.location.reload();">Refresh Page</button>
+      </div>
+      <div class="con">
+        <br>
+        <a href="/grid" class="button">Infinte Grid View</a>
+        </div>
+    </div>
+  </body>
+</html>
