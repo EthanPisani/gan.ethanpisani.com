@@ -1,6 +1,6 @@
 # gan.ethanpisani.com
 
-Website hosting 50,000 random imges from the model I trained of StlyeGAN2-ada using a galaxy dataset from kaggle.
+Website hosting 50,000 random imges from the model I trained on StyleGAN2-ADA using a galaxy dataset from kaggle.
 
 # Generating
 
